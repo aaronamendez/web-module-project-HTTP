@@ -8,11 +8,12 @@ api.use(express.json());
 
 api.use(cors());
 
+// GET ALL MOVIES
 api.get('/api/movies', (req, res) => {
 	res.json(Data.getAll());
 });
 
-//Get Post Endpoint
+//Get MOVIE Endpoint
 api.get('/api/movies/:id', (req, res) => {
 	res.json(Data.getById(req.params.id));
 });
