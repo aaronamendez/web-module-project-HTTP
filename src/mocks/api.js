@@ -8,30 +8,31 @@ api.use(express.json());
 
 api.use(cors());
 
+// Get Endpoint
 api.get('/api/movies', (req, res) => {
-  res.json(Data.getAll())
-})
+	res.json(Data.getAll());
+});
 
 //Get Post Endpoint
-api.get('/api/movies/:id',(req, res) => {
-  res.json(Data.getById(req.params.id))
-})
+api.get('/api/movies/:id', (req, res) => {
+	res.json(Data.getById(req.params.id));
+});
 
 //Create Post Endpoint
 api.post('/api/movies', (req, res) => {
-  res.json(Data.create(req.body))
-})
+	res.json(Data.create(req.body));
+});
 
 //Edit Post Endpoint
 api.put('/api/movies/:id', (req, res) => {
-  res.json(Data.edit(req.params.id, req.body))
-})
+	res.json(Data.edit(req.params.id, req.body));
+});
 
 //Delete Post Endpoint
 api.delete('/api/movies/:id', (req, res) => {
-  res.json(Data.remove(req.params.id))
-})
+	res.json(Data.remove(req.params.id));
+});
 
 api.listen(9000, () => {
-  console.log('listening on 9000')
-})
+	console.log('listening on 9000');
+});
