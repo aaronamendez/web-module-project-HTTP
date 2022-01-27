@@ -73,7 +73,7 @@ const Movie = (props) => {
 										type="button"
 										className="m-2 btn btn-danger"
 										value="Delete"
-										onClick={deleteMovie}
+										onClick={() => deleteMovie(id)}
 									/>
 								</span>
 							</section>

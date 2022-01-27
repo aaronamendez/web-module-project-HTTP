@@ -8,7 +8,6 @@ api.use(express.json());
 
 api.use(cors());
 
-// Get Endpoint
 api.get('/api/movies', (req, res) => {
 	res.json(Data.getAll());
 });

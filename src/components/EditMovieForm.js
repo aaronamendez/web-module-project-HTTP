@@ -3,7 +3,6 @@ import { useParams, useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 import axios from 'axios';
-import e from 'express';
 
 const EditMovieForm = (props) => {
 	const { push } = useHistory();
